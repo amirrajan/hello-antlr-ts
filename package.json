@@ -1,0 +1,31 @@
+{
+  "name": "hello-antlr-ts",
+  "version": "1.0.0",
+  "main": "src/main.ts",
+  "scripts": {
+    "build:tsc": "tsc",
+    "build:webpack": "webpack",
+    "build": "npm run build:tsc && npm run build:webpack",
+    "start": "webpack serve",
+    "test": "jest",
+    "generate": "java -jar ./bin/antlr-4.13.1-complete.jar -Dlanguage=TypeScript ./src/grammar/Expr.g4"
+  },
+  "author": "Amir Rajan",
+  "license": "MIT",
+  "description": "Example of using antlr4 client side with jest tests.",
+  "dependencies": {
+    "antlr4": "^4.13.2"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.2.0",
+    "@types/jest": "^30.0.0",
+    "html-webpack-plugin": "^5.6.5",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.103.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
